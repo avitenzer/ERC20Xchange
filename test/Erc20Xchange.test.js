@@ -86,7 +86,7 @@ contract("Erc20Xchange", accounts => {
         assert(sellOrders[0].trader === accounts[1]);
         assert(web3.utils.hexToAscii ( sellOrders[0].ticker).replace(/\0/g, '') === web3.utils.hexToAscii(bondTicker));
         assert(sellOrders[0].price === price);
-        assert(sellOrders[0].amount.toString() === amount.toNumber());
+        assert(sellOrders[0].amount.toString() === amount.toString());
         assert(sellOrders[0].side === '1'); // SELL
     });
 
